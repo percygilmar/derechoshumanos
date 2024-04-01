@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo.jpg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centra verticalmente el contenido */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la pantalla */
+}
+
+.theme {
+    flex: 1;
+    padding: 20px;
+    width: 40%; /* Reduzco el ancho para dejar más espacio entre las imágenes */
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo semitransparente */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Agrega margen inferior para separar los temas */
+    text-align: center; /* Centra el texto dentro del tema */
+    position: relative; /* Establece posición relativa para los elementos dentro del tema */
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    margin-bottom: 20px;
+}
+
+.photo-gallery img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Ajusta el margen inferior entre las imágenes */
+}
+
+.photo-gallery h2 {
+    position: absolute; /* Posiciona el h2 encima de la imagen */
+    top: 50%; /* Coloca el h2 en el centro vertical de la imagen */
+    left: 50%; /* Coloca el h2 en el centro horizontal de la imagen */
+    transform: translate(-50%, -50%); /* Centra el h2 completamente */
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center; /* Centra el texto del menú */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #c5ed62; /* Color de fondo del enlace */
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #d5e88a; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para el cuadro de información */
+.info {
+    display: none;
+}
+
+.info:target {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1px; /* Ajusta el padding para que el texto ocupe menos espacio */
+    border-radius: 5px;
+    z-index: 1000;
+    width: 50%; /* Ajusta el ancho del cuadro de información */
+    max-width: 435px; /* Establece un máximo para evitar que el cuadro sea demasiado ancho */
+}
